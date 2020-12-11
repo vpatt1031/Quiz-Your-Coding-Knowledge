@@ -7,7 +7,7 @@ var pos = 0, quiz, quiz_status, question, choice, choices, chA, chB, chC, chD, c
 // this is a multidimensional array with 4 inner array elements with 5 elements inside them
 var questions = [
   {
-      question: "Which JavaScript method asks the user a question and provides a response field for the answer?",
+      question: "What feature in JavaScript asks the user a question and provides a response field for the answer?",
       a: "alert box",
       b: "prompt box",
       c: "confirm box",
@@ -15,26 +15,28 @@ var questions = [
       answer: "B"
     },
   {
-      question: "",
-      a: "21",
-      b: "27",
-      c: "28",
-      d: "",
-      answer: "C"
+      question: "What are the 3 fundamental programming languages of the modern web?",
+      a: "HTML, Python, CSS",
+      b: "JavaScript, Python, JQuery",
+      c: "HTML, Python, JavaScript",
+      d: "HTML, CSS, JavaScript",
+      answer: "D"
     },
   {
-      question: "What is 16 / 4?",
-      a: "4",
-      b: "6",
-      c: "3",
+      question: "What displays a pop-up message to the user in JavaScript?",
+      a: "alert",
+      b: "prompt",
+      c: "confirm",
+      d: "pop-up",
       answer: "A"
     },
   {
-      question: "What is 8 x 12?",
-      a: "88",
-      b: "112",
-      c: "96",
-      answer: "C"
+      question: "What expression in JavaScript prints content to the debugger?",
+      a: "console",
+      b: "console.log",
+      c: "log",
+      d: "console.print",
+      answer: "B"
     },
     {
       question: "What is used in JavaScript to run repeated blocks of code over a set period?",
@@ -43,7 +45,31 @@ var questions = [
       c: "for loop",
       d: "loop",
       answer: "C"
-    }
+    },
+  {
+    question: "What do the letters CSS represent?",
+    a: "Central Style Sheet",
+    b: "Cascading Style Sections",
+    c: "Central Style Sections",
+    d: "Cascading Style Sheet",
+    answer: "D"
+  },
+  {
+    question: "What type of selectors are (p, a, div, span) in CSS?",
+    a: "ID selectors",
+    b: "Class selectors",
+    c: "Element selectors",
+    d: "None of the Above",
+    answer: "C"
+  },
+  {
+    question:"What termination is used in CSS and JavaScript?",
+    a: "period .",
+    b: "semicolon ;",
+    c: "single quotes'",
+    d: "dollar sign $",
+    answer: "B"
+  }
   ];
 // this get function is short for the getElementById function  
 function get(x){
