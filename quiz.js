@@ -1,23 +1,25 @@
 var pos = 0;
 var correct = 0;
-var test, test_status, question, choice, choices, chA, chB, chC;
+var quiz, quiz_status, question, choice, choices, chA, chB, chC, chD;
 
 // pos is position of where the user in the test or which question they're up to
-var pos = 0, test, test_status, question, choice, choices, chA, chB, chC, correct = 0;
+var pos = 0, quiz, quiz_status, question, choice, choices, chA, chB, chC, chD, correct = 0;
 // this is a multidimensional array with 4 inner array elements with 5 elements inside them
 var questions = [
   {
-      question: "What is 36 + 42",
-      a: "64",
-      b: "78",
-      c: "76",
+      question: "Which JavaScript method asks the user a question and provides a response field for the answer?",
+      a: "alert box",
+      b: "prompt box",
+      c: "confirm box",
+      d: "input box",
       answer: "B"
     },
   {
-      question: "What is 7 x 4?",
+      question: "",
       a: "21",
       b: "27",
       c: "28",
+      d: "",
       answer: "C"
     },
   {
@@ -33,6 +35,14 @@ var questions = [
       b: "112",
       c: "96",
       answer: "C"
+    },
+    {
+      question: "What is used in JavaScript to run repeated blocks of code over a set period?",
+      a: "tree loop",
+      b: "two loop",
+      c: "for loop",
+      d: "loop",
+      answer: "C"
     }
   ];
 // this get function is short for the getElementById function  
@@ -41,30 +51,32 @@ function get(x){
 }
 // this function renders a question for display on the page
 function renderQuestion(){
-  test = get("test");
+  quiz = get("quiz");
   if(pos >= questions.length){
-    test.innerHTML = "<h2>You got "+correct+" of "+questions.length+" questions correct</h2>";
-    get("test_status").innerHTML = "Test completed";
+    quiz.innerHTML = "<h2>You got "+correct+" of "+questions.length+" questions correct</h2>";
+    get("quiz_status").innerHTML = "Quiz Completed";
     // resets the variable to allow users to restart the test
     pos = 0;
     correct = 0;
     // stops rest of renderQuestion function running when test is completed
     return false;
   }
-  get("test_status").innerHTML = "Question "+(pos+1)+" of "+questions.length;
+ get("quiz_status").innerHTML = "Question "+(pos+1)+" of "+questions.length;
   
   question = questions[pos].question;
   chA = questions[pos].a;
   chB = questions[pos].b;
   chC = questions[pos].c;
+  chD = questions[pos].d;
   // display the question
-  test.innerHTML = "<h3>"+question+"</h3>";
+  quiz.innerHTML = "<h3>"+question+"</h3>";
   // display the answer options
   // the += appends to the data we started on the line above
-  test.innerHTML += "<label> <input type='radio' name='choices' value='A'> "+chA+"</label><br>";
-  test.innerHTML += "<label> <input type='radio' name='choices' value='B'> "+chB+"</label><br>";
-  test.innerHTML += "<label> <input type='radio' name='choices' value='C'> "+chC+"</label><br><br>";
-  test.innerHTML += "<button onclick='checkAnswer()'>Submit Answer</button>";
+  quiz.innerHTML += "<label> <input type='radio' name='choices' value='A'> "+chA+"</label><br>";
+  quiz.innerHTML += "<label> <input type='radio' name='choices' value='B'> "+chB+"</label><br>";
+  quiz.innerHTML += "<label> <input type='radio' name='choices' value='C'> "+chC+"</label><br>";
+  quiz.innerHTML += "<label> <input type='radio' name='choices' value='D'> "+chD+"</label><br><br>";
+  quiz.innerHTML += "<button onclick='checkAnswer()'>Submit Answer</button>";
 }
 function checkAnswer(){
   // use getElementsByName because we have an array which it will loop through
@@ -86,53 +98,3 @@ function checkAnswer(){
 }
 // Add event listener to call renderQuestion on page load event
 window.addEventListener("load", renderQuestion);
-
-
-
-//way to reference the variables from html
-//const quizContainer = document.getElementById('quiz');
-//const resultsContainer = document.getElementById('results');
-//const submitButton = document.getElementById('submit');
-
-//way to build the quiz
-// function buildQuiz(){}
-
-// function showResults(){}
-
-// // display quiz right away
-// buildQuiz();
-
-// // on submit, show results
-// submitButton.addEventListener('click', showResults);
-
-// //questions to quiz
-// const myQuestions = [
-//     {
-//       question: "Who invented JavaScript?",
-//       answers: {
-//         a: "Douglas Crockford",
-//         b: "Sheryl Sandberg",
-//         c: "Brendan Eich"
-//       },
-//       correctAnswer: "c"
-//     },
-//     {
-//       question: "Which one of these is a JavaScript package manager?",
-//       answers: {
-//         a: "Node.js",
-//         b: "TypeScript",
-//         c: "npm"
-//       },
-//       correctAnswer: "c"
-//     },
-//     {
-//       question: "Which tool can you use to ensure code quality?",
-//       answers: {
-//         a: "Angular",
-//         b: "jQuery",
-//         c: "RequireJS",
-//         d: "ESLint"
-//       },
-//       correctAnswer: "d"
-//     }
-//   ];

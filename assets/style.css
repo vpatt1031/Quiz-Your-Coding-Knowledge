@@ -1,6 +1,16 @@
 
-#test-status {
-    border:#5AB029 3px solid;
+/*Applies to every page*/
+body {
+   background: url(https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?ixid=MXwxMjA3fDB8MHxzZWFyY2h8M3x8Y29kZXxlbnwwfHwwfA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60);
+   background-repeat: none;
+   background-size: cover;
+}
+.container-fluid {
+    border:lightgreen 5px solid;
     padding:10px 40px 40px 40px;
-    background-color:#E5FCE3;
-    width:50%;}
+    background-color: white;
+    width:50%;
+}
+h4 {
+    color: white;
+}

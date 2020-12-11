@@ -1,0 +1,6 @@
+startquiz.html
+This page will have the starting page and display the instructions for the quiz 
+When the start quiz button is clicked it will hyperlink to the index.html page running the quiz
+The timer starts with the Start Quiz button is pressed
+I need to add the ability to add time to the timer if answered correctly
+I need subtract time from the counter if an answer is incorrect
