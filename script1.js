@@ -6,13 +6,14 @@ var btnC = document.getElementById("btnC");
 var btnD = document.getElementById("btnD");
 var startBtn = document.getElementById("startBtn");
 var timeRemainingText = document.getElementById("timeRemaining");
+var yourScore
 
 
 //Initializing Logical values (i.e. score, timer... etc...)
 var timer = 60;
 var currentQuestion = 0;
 var score = 0
-
+{
 //Array for the quiz questions and answers
 var questions = [
   {
@@ -120,6 +121,7 @@ function displayQuestion(){
 
 function handleAnswer(){
     var lastAnswer = this.textContent;
+    
     if(lastAnswer == questions[currentQuestion - 1].answer) {
         console.log("correct")
         score += 10;
@@ -130,29 +132,12 @@ function handleAnswer(){
     }
     displayQuestion();
 }
-function endGame () {
-  if (currentQuestion === 8);
+}
 
-}
-}
 //Instantiating Event System
 startBtn.addEventListener("click", beginQuiz);
 btnA.addEventListener("click", handleAnswer);
 btnB.addEventListener("click", handleAnswer);
 btnC.addEventListener("click", handleAnswer);
 btnD.addEventListener("click", handleAnswer);
-
-//Set up to collect highscores 
-var highScores = JSON.parse(localStorage.getItem("scores")) || [];
-submitScore.addEventListener("click", function(event){
-event.stopPropagation();
-
-var initials = inputline.value;
-var finalScore = {initials, timeRemaining};
-});
-
-
-
-//Sent to local storage
-highScores.push(finalScore);
-localStorage.setItem("scores",JSON.stringify(highScores));
+}

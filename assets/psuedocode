@@ -7,18 +7,4 @@ I need subtract time from the counter if an answer is incorrect
 Need to add a feature so user can input initials and save score
 Needs to display in high score
 
-<input type="button" value="Start the quiz" name="quiz" onclick="durationOfQuiz();">
-gettingAnswers();//executed immediately and builds the questions on page
-setTimeout(finishQuiz, 2 * 60 * 1000);//executed in 2 minutes and stops quiz
 
-// set new submission
-    localStorage.setItem("user", JSON.stringify(user));
-    
-    // get most recent submission
-    var lastUser = JSON.parse(localStorage.getItem("user"));
-    userFirstNameSpan.textContent = lastUser.firstName;
-    userLastNameSpan.textContent = lastUser.lastName;
-    userEmailSpan.textContent = lastUser.email;
-    userPasswordSpan.textContent = lastUser.password;
-  }
-});
