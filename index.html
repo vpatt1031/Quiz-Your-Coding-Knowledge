@@ -10,40 +10,46 @@
         <link rel="stylesheet" href="./assets/style.css">
         </head>
         <body>
-            <header>
-                        <!--Area in header for the high score and timer-->
-                        <div class="container">
-                            <div class="row mt-4">
-                              <div class="col-9">
-                                  <h4 id="scores">Your Score: <span id="yourScoreText"></span></h4>
+                <header>
+                    <!--Area in header for the high score and timer-->
+                    <div class="container">
+                        <div class="row mt-4">
+                          <div class="col-9">
+                              <h4>View High Scores</h4>
+                          </div>
+                              <div class="col-3">
+                                  <h4>Timer</h4>
                               </div>
-                                  <div class="col-3">
-                                      <h4 id="timer">Timer: <span id="timeRemaining">120</span></h4>
-                                  </div>
-                              </div>
-                            </div>
+                          </div>
                         </div>
-                </header>
+                    </div>
+                </header>  
                 <main>
                     <div class="container-fluid mt-4 rounded">
-                        <div class="row"></div>
-                          <div class="col"></div>
-                            <div id="quiz">
+                        <div class="row mt-4">
+                            <div class="col">
                                 <h1>Quiz Your Coding Knowledge</h1>
-                                <p id="question">Click on 1 of the 4 buttons to answer each question.<br>
+                                <p>
+                                    You have 2 minutes to answer 8 questions. <br>
+                                    Answer wrong and LOSE 5 seconds!<br>
+                                    Answer right and GAIN 5 seconds!<br>
                                     Click Start Quiz to begin.<br>
-                                    GOOD LUCK!</p>
-                                <div id="answerButtons">
-                                    <button id="btnA">A</button><br>
-                                    <button id="btnB">B</button><br>
-                                    <button id="btnC">C</button><br>
-                                    <button id="btnD">D</button><br>
-                                </div>
-                                </div>
-                            <br>
-                            <button class="btn btn-success" id="startBtn">Start Quiz!</button>
-                            <h2 id="quiz_status"></h2> 
-                          </main>
-            <script src="./script1.js"></script>
+                                    GOOD LUCK!
+                                </p>
+                            </div>
+                        </div>
+                        <div class="row">
+                          <div class="col">
+                              <a href="index.html">
+                                <button class="btn btn-success">Go to Quiz</button>
+                              </a>
+                          </div>
+                          </div>
+                    </div>
+                </main>
+               
         </body>
 </html>
+        
+                
+                  
